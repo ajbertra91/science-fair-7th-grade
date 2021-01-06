@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Joshua Bertrand's Science Fair Project!</h1>
+            <p>Can I simulate the possible traits of the offspring of two melons without knowing whether or not their dominant alleles are homozygous based on user input?</p>
+        </div>
+        <!-- <div class="row">
+            <div class="col-sm-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            </div>
+        </div> -->
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Melon #1</h2>
+                    <div class="form-group">
+                        <h3>Rind Thickness</h3>
+                        <label for="rind-thin">
+                            <input type="radio" name="rind" id="rind-thin" value="thin">
+                            Thin Rind
+                        </label>
+                        <label for="rind-thick">
+                            <input type="radio" name="rind" id="rind-thick" value="thick">
+                            Thick Rind
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <h3>Flesh Amount</h3>
+                        <label for="below-average">
+                            <input type="radio" name="flesh" id="below-average" value="bAverage">
+                            Below Average
+                        </label>
+                        <label for="average">
+                            <input type="radio" name="flesh" id="average" value="average">
+                            Average
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <h3>Seeds</h3>
+                        <label for="seeds-false">
+                            <input type="radio" name="seeds" id="seeds-false" value="no-seeds">
+                            No Seeds
+                        </label>
+                        <label for="seeds-true">
+                            <input type="radio" name="seeds" id="seeds-true" value="seeds">
+                            Seeds
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Melon #2</h2>
+                    <div class="form-group">
+                        <h3>Rind Thickness</h3>
+                        <label for="rind-thin2">
+                            <input type="radio" name="rind2" id="rind-thin2" value="thin">
+                            Thin Rind
+                        </label>
+                        <label for="rind-thick2">
+                            <input type="radio" name="rind2" id="rind-thick2" value="thick">
+                            Thick Rind
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <h3>Flesh Amount</h3>
+                        <label for="below-average2">
+                            <input type="radio" name="flesh2" id="below-average2" value="bAverage">
+                            Below Average
+                        </label>
+                        <label for="average2">
+                            <input type="radio" name="flesh2" id="average2" value="average">
+                            Average
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <h3>Seeds</h3>
+                        <label for="seeds-false2">
+                            <input type="radio" name="seeds2" id="seeds-false2" value="no-seeds">
+                            No Seeds
+                        </label>
+                        <label for="seeds-true2">
+                            <input type="radio" name="seeds2" id="seeds-true2" value="seeds">
+                            Seeds
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div class="row tables-row">
+            <div class="col-md-4">
+                <h3>Rind</h3>
+                <table id="rind-table" class="table table-bordered">
+                    <tr class="row-1">
+                        <td class="cell cell-label cell1">&nbsp;</td>
+                        <td class="cell cell-label cell2">Allele 1</td>
+                        <td class="cell cell-label cell3">Allele 2</td>
+                        <td class="cell cell-label cell4">Allele 1</td>
+                        <td class="cell cell-label cell5">Allele 2</td>
+                    </tr>
+                    <tr class="row-2">
+                        <td class="cell cell-label cell1">Allele 1</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-3">
+                        <td class="cell cell-label cell1">Allele 2</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-4">
+                        <td class="cell cell-label cell1">Allele 1</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-5">
+                        <td class="cell cell-label cell1">Allele 2</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                </table>                                    
+            </div>
+            <div class="col-md-4">
+                <h3>Flesh</h3>
+                <table id="flesh-table" class="table table-bordered">
+                    <tr class="row-1">
+                        <td class="cell cell-label cell1">&nbsp;</td>
+                        <td class="cell cell-label cell2">Allele 1</td>
+                        <td class="cell cell-label cell3">Allele 2</td>
+                        <td class="cell cell-label cell4">Allele 1</td>
+                        <td class="cell cell-label cell5">Allele 2</td>
+                    </tr>
+                    <tr class="row-2">
+                        <td class="cell cell-label cell1">Allele 1</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-3">
+                        <td class="cell cell-label cell1">Allele 2</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-4">
+                        <td class="cell cell-label cell1">Allele 1</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-5">
+                        <td class="cell cell-label cell1">Allele 2</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                </table>                                    
+            </div>
+            <div class="col-md-4">
+                <h3>Seeds</h3>
+                <table id="seed-table" class="table table-bordered">
+                    <tr class="row-1">
+                        <td class="cell cell-label cell1">&nbsp;</td>
+                        <td class="cell cell-label cell2">Allele 1</td>
+                        <td class="cell cell-label cell3">Allele 2</td>
+                        <td class="cell cell-label cell4">Allele 1</td>
+                        <td class="cell cell-label cell5">Allele 2</td>
+                    </tr>
+                    <tr class="row-2">
+                        <td class="cell cell-label cell1">Allele 1</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-3">
+                        <td class="cell cell-label cell1">Allele 2</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-4">
+                        <td class="cell cell-label cell1">Allele 1</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                    <tr class="row-5">
+                        <td class="cell cell-label cell1">Allele 2</td>
+                        <td class="cell cell-value cell2">&nbsp;</td>
+                        <td class="cell cell-value cell3">&nbsp;</td>
+                        <td class="cell cell-value cell4">&nbsp;</td>
+                        <td class="cell cell-value cell5">&nbsp;</td>
+                    </tr>
+                </table>                                    
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
