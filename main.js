@@ -24,6 +24,11 @@ function getMelonValues(melon='') {
 
 function getTableCells(table='#rind-table') {
     return {
+        r0c3: document.querySelector(`${table} .row-0 .cell3`),
+        r0c4: document.querySelector(`${table} .row-0 .cell4`),
+        r2c0: document.querySelector(`${table} .row-2 .cell0`),
+        r4c0: document.querySelector(`${table} .row-4 .cell0`),
+
         r1c1: document.querySelector(`${table} .row-1 .cell1`),
         r1c2: document.querySelector(`${table} .row-1 .cell2`),
         r1c3: document.querySelector(`${table} .row-1 .cell3`),
@@ -53,6 +58,12 @@ function getTableCells(table='#rind-table') {
 }
 
 function updateTableCells(table, melon1, melon2, type) {
+    table.r0c3.innerHTML = 'Homozygous';
+    table.r0c4.innerHTML = melon1[type][2] === melon1[type][3] ? 'Homozygous' : 'Heterozygous';
+
+    table.r2c0.innerHTML = 'Homozygous';
+    table.r4c0.innerHTML = melon2[type][2] === melon2[type][3] ? 'Homozygous' : 'Heterozygous';
+
     // alleles
     table.r1c2.innerHTML = melon1[type][0];
     table.r1c3.innerHTML = melon1[type][1];
@@ -105,6 +116,7 @@ function updateTableCells(table, melon1, melon2, type) {
         updateTableCells(rindCells, melon1, melon2, 'rind');
         updateTableCells(fleshCells, melon1, melon2, 'flesh');
         updateTableCells(seedCells, melon1, melon2, 'seeds');
+
 
     })
 })()
